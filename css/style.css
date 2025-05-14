@@ -2,9 +2,21 @@
 .botonComenzar {
     background-color: rgb(147, 81, 209);
     color: white;
+    height: 50px;
 }
 
 .botonEnviar {
     background-color: green;
     color: white;
+    height: 38px;
+}
+
+@media (min-width: 767px) {
+    .botonComenzar {
+        height: 50px;
+    }
+
+    .botonEnviar {
+        height: 40px;
+    }
 }
