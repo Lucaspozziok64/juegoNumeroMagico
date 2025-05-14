@@ -18,11 +18,11 @@
             <div class="bg-body-secondary text-center p-3 contenedor-juego">
                 <p>Juego - Presiona el boton Comenzar el juego para generar numero aleatorio <b>(1-100)</b>, luego ingresa el numero que creas ganador y presiona Adivinar para verificar si acertaste</p>
                 <div class="my-2">
-                    <button type="button" class="botonComenzar rounded-5 w-50">Comenzar el juego</button>
+                    <button type="button" id="botonComenzar" class="botonComenzar rounded-5 w-50" onclick="numeroRandom()">Comenzar el juego</button>
                 </div>
                 <div class="my-2">
-                    <input type="number" placeholder="Ingrese un numero">
-                    <button class="botonEnviar border-1 rounded-2 w-25">Adivinar</button>
+                    <input type="number" id="inputNumero" placeholder="Ingrese un numero">
+                    <button class="botonEnviar border-1 rounded-2 w-25" id="btnDesabilitarBoton" onclick="compararNumero()">Adivinar</button>
                 </div>
             </div>
         </section>
