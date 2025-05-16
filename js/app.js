@@ -2,23 +2,32 @@ let randomNumber;
 
 const numeroRandom = () => {
     randomNumber = Math.floor(Math.random() * 10) + 1;
-    alert('Numero generado(1-10)...adivina cual es!!!');
+    alert('Numero aleatorio generado (1-10)...adivina cual es!!!');
     return randomNumber
 }
 
-const compararNumero = () => {
-    const numeroIngresado = document.getElementById('inputNumero');
-    const inputValue = numeroIngresado.value;
-    const numeroParseado = parseInt(inputValue, 10);
+const compararNumero = (e) => {
+    e.preventDefault();
 
-    if(numeroParseado > randomNumber) {
+    let numeroIngresado = document.getElementById('inputNumero').value;
+    numeroIngresado = parseInt(numeroIngresado, 10);
+    console.log(numeroIngresado)
+
+    if(isNaN(numeroIngresado)) {
+        alert('Debe ingresar un numero')
+    }else if(isNaN(randomNumber) || randomNumber === undefined) {
+        alert('Debe comenzar el juego para adivinar')
+    }else if(numeroIngresado > randomNumber) {
         alert('El numero que ingresaste es MAYOR al numero MAGICO')
-    } else if (numeroParseado < randomNumber) {
+    } else if (numeroIngresado < randomNumber) {
         alert('El numero ingresado es MENOR al numero MAGICO')
-    } else {
+    }else {
         alert('¡¡¡ADIVINASTE!!!');
     }
 }
+
+const miFormulario = document.getElementById('juegoForm');
+miFormulario.addEventListener('submit', compararNumero);
 
 const botonComenzar = document.getElementById('botonComenzar')
 botonComenzar.addEventListener('click', function() {
