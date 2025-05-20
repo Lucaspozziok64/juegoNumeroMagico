@@ -13,7 +13,6 @@ const compararNumero = (e) => {
 
     let numeroIngresado = document.getElementById('inputNumero').value;
     numeroIngresado = parseInt(numeroIngresado, 10);
-    console.log(numeroIngresado);
 
     if(isNaN(numeroIngresado)) {
         alert('Debe ingresar un numero');
