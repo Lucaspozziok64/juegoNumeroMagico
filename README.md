@@ -10,6 +10,14 @@
 - 4- Recibirás pistas si tu número es mayor o menor
 - 5- ¡Ganas cuando adivines el número correcto!
 
+🚀 Cómo probar el proyecto
+-
+- 1- Clona el repositorio:
+````
+https://github.com/Lucaspozziok64/juegoNumeroMagico.git
+````
+- 2- Abre el archivo index en tu navegador
+
 📂 Estructura del proyecto
 - 
 ````
